@@ -255,7 +255,7 @@
   }
 
   .section-heading {
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(28px, 6vw, 56px);
   color: var(--brown-dark);
   font-weight: 800;
   line-height: 1.2;
@@ -268,7 +268,7 @@
 
   .section-sub {
   color: var(--text-mid);
-  font-size: 1rem;
+  font-size: clamp(14px, 2.5vw, 18px);
   max-width: auto;
   line-height: 1.7;
   text-align: center;
@@ -298,9 +298,9 @@
   display: none;
 }
 
-  @media (max-width: 2000px) {
+  @media (max-width: 600px) {
     .break-mobile {
-      display: inline;
+      display: block;
     }
   }
 
@@ -311,22 +311,31 @@
   }
 
   .trust-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 48px;
+    margin-top: 48px;              
+    overflow-x: auto;           
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .trust-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .trust-card {
     background: var(--beige-light);
     border: 1px solid var(--beige-mid);
     border-radius: var(--radius);
-    padding: 28px 24px;
+    padding: 28px 20px;
     transition: box-shadow 0.2s;
-    display: flex;               /* 🔥 add this */
-    align-items: center;         /* 🔥 vertical center */
-    justify-content: center;     /* 🔥 horizontal center */
-    text-align: center;  
+
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+
+    text-align: center;   /* ✅ keep text centered */
   }
 
   .trust-card:hover { box-shadow: var(--shadow-soft); }
@@ -680,6 +689,9 @@
     .footer-inner { flex-direction: column; }
     .nav-logo { font-size: 1.1rem; }
   }
+
+
+
 </style>
 </head>
 <body>
@@ -726,7 +738,19 @@
   <div class="container">
     <div class="section-label">K J Packs</div>
     <p class="section-sub">K J Packs is a growing carton box manufacturing company based in Coimbatore, specializing in high-quality corrugated packaging solutions. We manufacture durable carton boxes, corrugated rolls and white board boxes for various industries including pump, motor, textile, and general manufacturing sectors. We focus on providing reliable quality, fast delivery, and fully customized packaging solutions to meet our clients’ exact requirements.</p>
-    <div class="trust-grid">
+    <div class="trust-grid" id="trustGrid">
+      <div class="trust-card">
+        <h3>Custom Sizes & Designs Available</h3>
+      </div>
+      <div class="trust-card">
+        <h3>Bulk & Small Orders Accepted</h3>
+      </div>
+      <div class="trust-card">
+        <h3>Required Strength & Quality Materials</h3>
+      </div>
+      <div class="trust-card">
+        <h3>Printing & Branding Available</h3>
+      </div>
       <div class="trust-card">
         <h3>Custom Sizes & Designs Available</h3>
       </div>
@@ -943,5 +967,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+<script>
+  const grid = document.getElementById('trustGrid');
+
+  let isAdjusting = false;
+
+  grid.addEventListener('scroll', () => {
+    if (isAdjusting) return;
+
+    const half = grid.scrollWidth / 2;
+
+    // When reaching end (AFTER snap)
+    if (grid.scrollLeft >= half) {
+      isAdjusting = true;
+      grid.scrollLeft -= half; // shift back smoothly
+      setTimeout(() => isAdjusting = false, 50);
+    }
+
+    // When reaching start
+    if (grid.scrollLeft <= 0) {
+      isAdjusting = true;
+      grid.scrollLeft += half;
+      setTimeout(() => isAdjusting = false, 50);
+    }
+  });
+</script>
+
 </body>
 </html>
