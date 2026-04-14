@@ -334,6 +334,7 @@
     min-width: 250px;
     flex: 0 0 auto;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 
     text-align: center;   /* ✅ keep text centered */
   }
@@ -737,7 +738,8 @@
 <section id="trust">
   <div class="container">
     <div class="section-label">K J Packs</div>
-    <p class="section-sub">K J Packs is a growing carton box manufacturing company based in Coimbatore, specializing in high-quality corrugated packaging solutions. We manufacture durable carton boxes, corrugated rolls and white board boxes for various industries including pump, motor, textile, and general manufacturing sectors. We focus on providing reliable quality, fast delivery, and fully customized packaging solutions to meet our clients’ exact requirements.</p>
+    <p class="section-sub">K J Packs is a growing carton box manufacturing company based in Coimbatore, specializing in high-quality corrugated packaging solutions. We manufacture durable carton boxes, corrugated rolls and white board boxes for various industries including pump, motor, textile
+       and general manufacturing sectors. We focus on providing reliable quality, fast delivery and fully customized packaging solutions to meet our clients’ exact requirements.</p>
     <div class="trust-grid" id="trustGrid">
       <div class="trust-card">
         <h3>Custom Sizes & Designs Available</h3>
@@ -778,7 +780,7 @@
         <div class="product-body">
           <span class="product-tag">Shipping &amp; Storage</span>
           <h3>Corrugated Boxes</h3>
-          <p>We manufacture high-quality customized corrugated carton boxes suitable for heavy-duty and industrial use. Available in 3 ply, 5 ply, 7 ply, and 9 ply options, our boxes are designed to provide maximum strength and protection.</p>
+          <p>We manufacture high-quality customized corrugated carton boxes suitable for heavy-duty and industrial use. Available in 3, 5, 7, 9 and more ply options, our boxes are designed to provide maximum strength and protection.</p>
           <ul class="product-bullets">
             <li>Custom Sizes Available</li>
             <li>Strong & Durable</li>
@@ -790,7 +792,7 @@
         <div class="product-body">
           <span class="product-tag">Wrapping &amp; Cushioning</span>
           <h3>Corrugated Rolls</h3>
-          <p>Our corrugated rolls are ideal for packaging, wrapping, and cushioning applications. Available in various widths and GSM quality, they ensure safe handling and transport of goods.</p>
+          <p>Our corrugated rolls are ideal for packaging, wrapping and cushioning applications. Available in various widths and GSM quality, they ensure safe handling and transport of goods.</p>
           <ul class="product-bullets">
             <li>All Width Sizes Available</li>
             <li>Required GSM Quality</li>
@@ -802,7 +804,7 @@
         <div class="product-body">
           <span class="product-tag">Retail &amp; Branding</span>
           <h3>White Board Boxes</h3>
-          <p>We manufacture premium white board boxes for clean and professional packaging. Suitable for retail, food, and industrial applications with custom design options.</p>
+          <p>We manufacture premium white board boxes for clean and professional packaging. Suitable for retail, food and industrial applications with custom design options.</p>
           <ul class="product-bullets">
             <li>Clean & Premium Finish</li>
             <li>Custom Design Available</li>
@@ -973,23 +975,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isAdjusting = false;
 
+  window.addEventListener('load', () => {
+    grid.scrollLeft = grid.scrollWidth / 2;
+  });
+
   grid.addEventListener('scroll', () => {
     if (isAdjusting) return;
 
     const half = grid.scrollWidth / 2;
 
-    // When reaching end (AFTER snap)
+    // 👉 Right side loop
     if (grid.scrollLeft >= half) {
       isAdjusting = true;
-      grid.scrollLeft -= half; // shift back smoothly
-      setTimeout(() => isAdjusting = false, 50);
+
+      requestAnimationFrame(() => {
+        grid.scrollLeft -= half;
+        isAdjusting = false;
+      });
     }
 
-    // When reaching start
+    // 👉 Left side loop
     if (grid.scrollLeft <= 0) {
       isAdjusting = true;
-      grid.scrollLeft += half;
-      setTimeout(() => isAdjusting = false, 50);
+
+      requestAnimationFrame(() => {
+        grid.scrollLeft += half;
+        isAdjusting = false;
+      });
     }
   });
 </script>
