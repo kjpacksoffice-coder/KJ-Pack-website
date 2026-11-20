@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industries Served | KJ Packs Corrugated Packaging</title>
+<meta name="description" content="KJ Packs supports corrugated packaging enquiries from textiles, automotive, engineering, electronics, food, exports and other industries in Tamil Nadu and Kerala.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.kjpacks.com/industries.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KJ Packs">
+<meta property="og:title" content="Industries Served | KJ Packs Corrugated Packaging">
+<meta property="og:description" content="KJ Packs supports corrugated packaging enquiries from textiles, automotive, engineering, electronics, food, exports and other industries in Tamil Nadu and Kerala.">
+<meta property="og:url" content="https://www.kjpacks.com/industries.html">
+<meta name="theme-color" content="#b58a58">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script defer src="/content/company.js"></script>
+<script defer src="/content/navigation.js"></script>
+<script defer src="/content/products.js"></script>
+<script defer src="/content/industries.js"></script>
+<script defer src="/content/testimonials.js"></script>
+<script defer src="/content/blog.js"></script>
+<script defer src="/content/seo.js"></script>
+<script defer src="/assets/js/site.js"></script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main><section class="page-hero"><div class="container"><div class="breadcrumb">Home / Industries</div><span class="eyebrow">Industries served</span><h1>Corrugated Packaging for Multiple Industry Sectors</h1><p>Packaging requirements differ by product size, weight, handling and distribution. KJ Packs welcomes bulk enquiries from businesses across Tamil Nadu and Kerala.</p></div></section>
+<section class="section"><div class="container"><div class="grid product-grid" id="industry-list"></div></div></section></main>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{const el=document.getElementById("industry-list");if(el&&window.KJ_INDUSTRIES)el.innerHTML=window.KJ_INDUSTRIES.map(i=>`<article class="product-card"><img src="${i.image}" alt="${i.name}" loading="lazy"><div class="card-body"><h3>${i.name}</h3><p>${i.description || ""}</p></div></article>`).join("");});
+</script>
+<div id="site-footer"></div>
+</body></html>

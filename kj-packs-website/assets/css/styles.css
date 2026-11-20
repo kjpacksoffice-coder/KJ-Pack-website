@@ -1,0 +1,651 @@
+:root{--kraft:#b58a58;--kraft-dark:#8f6840;--ink:#292b2d;--muted:#666b70;--paper:#f7f5f1;--white:#fff;--line:#e7e1d8;--max:1180px;--radius:14px;--shadow:0 14px 35px rgba(34,31,27,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Montserrat,Arial,sans-serif;line-height:1.65}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav-wrap{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.06em}.brand-mark{width:42px;height:42px;background:var(--kraft);display:grid;place-items:center;color:#fff;border-radius:8px;font-weight:900}.brand small{display:block;font-size:9px;letter-spacing:.13em;color:var(--muted);font-weight:700}.nav-links{display:flex;align-items:center;gap:20px;font-size:12px;font-weight:700}.nav-links a:hover,.nav-links a.active{color:var(--kraft-dark)}.nav-actions{display:flex;gap:9px;align-items:center}.menu-toggle{display:none;border:1px solid var(--line);background:white;border-radius:8px;padding:9px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:7px;background:var(--kraft);color:#fff;font-size:12px;font-weight:800;border:1px solid var(--kraft);cursor:pointer;transition:.2s}.btn:hover{background:var(--kraft-dark);border-color:var(--kraft-dark);transform:translateY(-1px)}.btn-outline{background:transparent;color:var(--ink);border-color:#b9b2a8}.btn-dark{background:var(--ink);border-color:var(--ink)}.btn-sm{padding:10px 13px}.hero{background:var(--paper);padding:28px 0 48px}.hero-image{aspect-ratio:1.5/1;overflow:hidden;border-radius:18px;background:#e9e1d5;position:relative}.hero-image img{width:100%;height:100%;object-fit:cover}.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(22px,5vw,70px);max-width:760px;background:linear-gradient(90deg,rgba(247,245,241,.75),rgba(247,245,241,.55) 48%,rgba(247,245,241,0))}.eyebrow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--kraft-dark)}h1,h2,h3,h4{line-height:1.2;margin:0 0 15px;letter-spacing:-.035em}h1{font-size:clamp(30px,5vw,62px);max-width:720px}h2{font-size:clamp(25px,3.5vw,38px)}h3{font-size:18px}p{margin:0 0 15px;color:#555b60}.hero-copy p{max-width:520px;font-size:clamp(13px,1.4vw,17px)}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.section{padding:76px 0}.section-soft{background:var(--paper)}.section-head{max-width:700px;margin-bottom:30px}.section-head p{max-width:650px}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-1px}.stat{padding:15px;background:var(--ink);color:#fff;border-radius:10px}.stat strong{display:block;font-size:25px;color:#e0bd91}.stat span{font-size:11px;color:#e6e2dc}.grid{display:grid;gap:20px}.product-grid{grid-template-columns:repeat(3,1fr)}.product-card,.industry-card,.feature-card,.blog-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.0025);transition:.2s}.product-card:hover,.industry-card:hover,.blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--paper)}.card-body{padding:19px}.card-body p{font-size:12px}.text-link{font-size:12px;font-weight:800;color:var(--kraft-dark)}.industry-window{overflow:hidden;position:relative}.industry-track{display:flex;gap:16px;width:max-content;animation:marquee 48s linear infinite}.industry-window:hover .industry-track{animation-play-state:paused}.industry-card{width:230px}.industry-card img{width:100%;height:140px;object-fit:cover}.industry-card h3{font-size:13px;padding:0 14px 14px;margin:13px 0 0}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:24px}.feature-card{padding:18px}.feature-card b{display:block;font-size:13px;margin-bottom:5px}.feature-card p{font-size:11px;margin:0}.check-list{padding:0;list-style:none}.check-list li{padding:8px 0 8px 27px;position:relative;font-size:13px}.check-list li:before{content:"✓";position:absolute;left:0;color:var(--kraft-dark);font-weight:900}.cta-band{background:var(--ink);color:white;border-radius:16px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-band p{color:#d5d1ca;margin:0}.cta-band h2{color:white;margin-bottom:8px}.trust-grid{grid-template-columns:repeat(3,1fr)}.trust-item{padding:24px;background:var(--paper);border-radius:12px}.trust-item strong{display:block;margin-bottom:5px}.testimonial-grid{grid-template-columns:repeat(3,1fr)}.testimonial-placeholder{border:1px dashed #b8afa3;border-radius:12px;padding:22px;color:var(--muted);font-size:12px}.page-hero{background:var(--paper);padding:55px 0}.page-hero p{max-width:720px}.breadcrumb{font-size:11px;color:var(--muted);margin-bottom:15px}.content-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:35px}.panel{padding:25px;border:1px solid var(--line);border-radius:12px;background:#fff}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid #d8d2c9;border-radius:7px;padding:12px;background:#fff;color:var(--ink);font-size:13px;min-width:0}.field textarea{min-height:95px;resize:vertical}.form-note{font-size:11px;color:var(--muted)}.form-status{font-size:12px;margin-top:12px}.product-detail-image{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;background:var(--paper)}.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}.pill{background:var(--paper);border:1px solid var(--line);padding:7px 10px;border-radius:99px;font-size:10px;font-weight:700}.blog-grid{grid-template-columns:repeat(3,1fr)}.blog-card img{width:100%;aspect-ratio:16/10;object-fit:cover}.blog-card .card-body{padding:18px}.blog-meta{font-size:10px;color:var(--muted);margin-bottom:8px}.article{max-width:820px;margin:auto}.article h2{font-size:25px;margin-top:30px}.article p,.article li{font-size:15px;line-height:1.85}.article-feature{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin:25px 0}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}.map-frame{width:100%;height:350px;border:0;border-radius:12px}.site-footer{background:#202224;color:#fff;padding:55px 0 20px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}.site-footer p,.site-footer a{color:#c9c7c3;font-size:12px}.site-footer h3{font-size:13px;color:#fff}.footer-links{display:grid;gap:9px}.footer-bottom{border-top:1px solid #444;margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:#aaa;font-size:10px}.whatsapp-float{position:fixed;right:20px;bottom:22px;z-index:80;background:#218c55;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 7px 22px #0003;font-size:25px;font-weight:900}.whatsapp-float span{position:absolute;right:68px;background:#fff;color:var(--ink);padding:8px 11px;border-radius:7px;white-space:nowrap;font-size:10px;font-weight:800;box-shadow:var(--shadow)}.empty-state{padding:25px;background:var(--paper);border-radius:12px;font-size:12px;color:var(--muted)}.mobile-only{display:none}
+@media(max-width:1000px){.nav-links{gap:12px;font-size:10px}.nav-actions .btn{padding:10px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.container{width:min(100% - 28px,var(--max))}.nav-wrap{min-height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}.nav-actions .call-btn{display:none}.hero{padding:15px 0 30px}.hero-image{aspect-ratio:1.5/1;border-radius:12px}.hero-copy{padding:17px;width:100%;background:linear-gradient(90deg,rgba(247,245,241,.97),rgba(247,245,241,.85) 72%,rgba(247,245,241,0))}.hero-copy h1{font-size:clamp(21px,6vw,34px);max-width:78%}.hero-copy p{font-size:10px;line-height:1.4;max-width:72%;margin-bottom:7px}.hero-copy .eyebrow{font-size:8px}.hero-actions{gap:6px;margin-top:5px}.hero-actions .btn{font-size:9px;padding:8px 10px}.stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}.stat{padding:15px}.stat strong{font-size:20px}.stat span{font-size:9px}.section{padding:52px 0}.product-grid{grid-template-columns:repeat(2,1fr);gap:12px}.card-body{padding:13px}.card-body h3{font-size:13px}.card-body p{font-size:10px}.industry-card{width:190px}.industry-card img{height:115px}.industry-card h3{font-size:11px}.two-col,.content-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.feature-list{gap:8px}.feature-card{padding:13px}.feature-card b{font-size:11px}.feature-card p{font-size:10px}.cta-band{padding:23px;display:block}.cta-band .btn{margin-top:16px}.trust-grid,.testimonial-grid,.blog-grid{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.page-hero{padding:38px 0}.footer-grid{grid-template-columns:1fr 1fr;gap:22px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}.map-frame{height:280px}}
+@media(max-width:420px){.nav-actions .btn{font-size:9px;padding:9px}.brand{font-size:13px}.brand-mark{width:36px;height:36px}.hero-copy h1{font-size:21px}.hero-copy p{font-size:9px}.hero-copy .eyebrow{font-size:7px}.hero-actions .btn{padding:7px 8px;font-size:8px}.trust-grid,.testimonial-grid,.blog-grid{grid-template-columns:1fr}.whatsapp-float{width:52px;height:52px;right:13px;bottom:15px}.whatsapp-float span{display:none}}
+/* ==========================================
+   KJ PACKS - MOBILE USP CUSTOM SETTINGS
+   Controls: Experience, Capacity, Locations
+   Desktop will remain unchanged.
+   ========================================== */
+
+@media only screen and (max-width: 760px) {
+
+    /* USP BOXES - Overall layout */
+    .stats-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        /* Space between USP boxes */
+        gap: 5px !important;
+
+        /* Space above USP boxes */
+        margin-top: 0 !important;
+    }
+
+    /* USP BOX - Height and internal spacing */
+    .stats-grid .stat {
+        padding: 3px 5px !important;
+        min-height: 0 !important;
+        border-radius: 7px !important;
+    }
+
+    /* USP MAIN HEADING */
+    .stats-grid .stat strong {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin: 0 0 2px 0 !important;
+        padding: 0 !important;
+    }
+
+    /* USP DESCRIPTION */
+    .stats-grid .stat span {
+        display: block;
+        font-size: 9px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE - SCREEN BELOW 420px
+   ========================================== */
+
+@media only screen and (max-width: 420px) {
+
+    .stats-grid {
+        gap: 4px !important;
+    }
+
+    .stats-grid .stat {
+        padding: 5px 7px !important;
+    }
+
+    .stats-grid .stat strong {
+        font-size: 13px !important;
+    }
+
+    .stats-grid .stat span {
+        font-size: 7px !important;
+    }
+
+}
+.stats-grid .stat {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   MOBILE NAVIGATION - GET QUOTE BUTTON
+   ========================================== */
+
+@media only screen and (max-width: 760px) {
+
+    /* Navigation action container */
+    .nav-actions {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex: 1;
+    }
+
+    /* Get Quote button */
+    .nav-actions .btn:not(.call-btn) {
+        display: flex !important;
+
+        /* Horizontal and vertical alignment */
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+
+        /* Font size control */
+        font-size: 11px !important;
+
+        /* Button dimensions */
+        padding: 9px 16px !important;
+        min-width: 110px;
+
+        /* Button appearance */
+        border-radius: 6px;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE - BELOW 420px
+   ========================================== */
+
+@media only screen and (max-width: 420px) {
+
+    .nav-actions .btn:not(.call-btn) {
+        font-size: 10px !important;
+        padding: 8px 12px !important;
+        min-width: 100px;
+    }
+
+}
+/* ==========================================
+   MOBILE NAVIGATION - GET QUOTE LEFT OF MENU
+   Desktop navigation remains unchanged
+   ========================================== */
+
+@media only screen and (max-width: 760px) {
+
+    /* Keep navigation items in one row */
+    .nav-wrap {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    /* Move Get Quote button to the left */
+    .nav-actions {
+        order: 2 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    /* Hamburger menu on the right */
+    .menu-toggle {
+        order: 3 !important;
+        flex: 0 0 auto !important;
+        margin-left: 0 !important;
+    }
+
+    /* Get Quote font and size controls */
+    .nav-actions .btn:not(.call-btn) {
+        font-size: 11px !important;
+        padding: 8px 12px !important;
+        min-width: 100px !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+}
+
+/* Smaller phones */
+@media only screen and (max-width: 420px) {
+
+    .nav-actions .btn:not(.call-btn) {
+        font-size: 10px !important;
+        padding: 7px 9px !important;
+        min-width: 88px !important;
+    }
+
+}
+
+/* =====================================
+   HOMEPAGE QUOTE FORM FIELD LAYOUT
+   ===================================== */
+
+/* Desktop */
+#quote-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Default field width: 2 columns */
+#quote-form .field {
+    grid-column: span 2;
+    min-width: 0;
+}
+
+/* Three fields in one row */
+#quote-form .field:nth-child(1),
+#quote-form .field:nth-child(2),
+#quote-form .field:nth-child(3),
+#quote-form .field:nth-child(8),
+#quote-form .field:nth-child(9),
+#quote-form .field:nth-child(10) {
+    grid-column: span 2;
+}
+
+/* Two fields in one row */
+#quote-form .field:nth-child(4),
+#quote-form .field:nth-child(5),
+#quote-form .field:nth-child(11),
+#quote-form .field:nth-child(12) {
+    grid-column: span 3;
+}
+
+/* Full-width fields */
+#quote-form .field:nth-child(n+13) {
+    grid-column: 1 / -1;
+}
+
+/* Mobile */
+
+/* MOBILE QUOTE FORM LAYOUT */
+@media (max-width: 760px) {
+
+    #quote-form .form-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    /* Three fields in one row */
+    #quote-form .field:nth-child(1),
+    #quote-form .field:nth-child(2),
+    #quote-form .field:nth-child(3),
+    #quote-form .field:nth-child(6),
+    #quote-form .field:nth-child(7),
+    #quote-form .field:nth-child(8) {
+        grid-column: span 2;
+    }
+
+    /* Two fields in one row */
+    #quote-form .field:nth-child(4),
+    #quote-form .field:nth-child(5),
+    #quote-form .field:nth-child(9),
+    #quote-form .field:nth-child(10) {
+        grid-column: span 3;
+    }
+
+    /* Full-width fields */
+    #quote-form .field:nth-child(n+11) {
+        grid-column: 1 / -1;
+    }
+
+    /* Prevent input overflow */
+    #quote-form .field input,
+    #quote-form .field select,
+    #quote-form .field textarea {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+}
+/* Navigation logo */
+.site-header .brand img {
+    width: 170px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Mobile logo */
+@media (max-width: 760px) {
+    .site-header .brand img {
+        width: 130px;
+        height: 45px;
+    }
+}
+/* Keep navigation logo at the left */
+.site-header .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .brand {
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+/* Logo image size */
+.site-header .brand img {
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+/* LOGO AND COMPANY NAME */
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-right: auto;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-header .brand img {
+    width: 65px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.site-header .brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.site-header .brand-text strong {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #29231d;
+}
+
+.site-header .brand-text small {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #756858;
+}
+
+/* MOBILE */
+@media (max-width: 760px) {
+    .site-header .brand {
+        gap: 1px;
+    }
+
+    .site-header .brand img {
+        width: 48px;
+        height: 42px;
+    }
+
+    .site-header .brand-text strong {
+        font-size: 17px;
+    }
+
+    .site-header .brand-text small {
+        font-size: 6px;
+    }
+}
+
+/* FOOTER LOGO SIZE */
+.site-footer .brand img {
+    width: 55px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* FOOTER COMPANY NAME */
+.site-footer .brand span {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+/* FOOTER TAGLINE */
+.site-footer .brand span small {
+    display: block;
+    font-size: 8px;
+    line-height: 1.2;
+}
+
+/* MOBILE FOOTER LOGO */
+@media (max-width: 760px) {
+    .site-footer .brand img {
+        width: 42px;
+        height: 36px;
+    }
+
+    .site-footer .brand span {
+        font-size: 15px;
+    }
+
+    .site-footer .brand span small {
+        font-size: 7px;
+    }
+}
+
+
+/* ==========================================
+   KJ PACKS - ALL QUOTE FORMS
+   SAME ROW LAYOUT ON DESKTOP, TABLET & MOBILE
+   ========================================== */
+
+/* Six-column layout */
+.quote-form .form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 14px;
+}
+
+/* Allow fields to shrink properly */
+.quote-form .field {
+    min-width: 0;
+    grid-column: span 3;
+}
+
+/* Product name - Full row */
+.quote-form .form-grid > .field.full {
+    grid-column: 1 / -1 !important;
+}
+
+/* Length, Breadth, Height - 3 fields per row */
+.quote-form .form-grid > .field:nth-child(2),
+.quote-form .form-grid > .field:nth-child(3),
+.quote-form .form-grid > .field:nth-child(4) {
+    grid-column: span 2;
+}
+
+/* Dimension, Unit, Ply - 3 fields per row */
+.quote-form .form-grid > .field:nth-child(5),
+.quote-form .form-grid > .field:nth-child(6),
+.quote-form .form-grid > .field:nth-child(7) {
+    grid-column: span 2;
+}
+
+/* GSM and BF - 2 fields per row */
+.quote-form .form-grid > .field:nth-child(8),
+.quote-form .form-grid > .field:nth-child(9) {
+    grid-column: span 3;
+}
+
+/* Printing and Quantity - 2 fields per row */
+.quote-form .form-grid > .field:nth-child(10),
+.quote-form .form-grid > .field:nth-child(11) {
+    grid-column: span 3;
+}
+
+/* Delivery pincode - Full row */
+.quote-form .form-grid > .field:nth-child(12) {
+    grid-column: 1 / -1;
+}
+
+/* Company / Person name - Full row */
+.quote-form .form-grid > .field:nth-child(13) {
+    grid-column: 1 / -1;
+}
+
+/* Contact number - Full row */
+.quote-form .form-grid > .field:nth-child(14) {
+    grid-column: 1 / -1;
+}
+
+/* Special requirements - Full row */
+.quote-form .form-grid > .field:nth-child(15) {
+    grid-column: 1 / -1;
+}
+
+/* Submit button and instructions - Full row */
+.quote-form .form-grid > .field:nth-child(16) {
+    grid-column: 1 / -1;
+}
+
+/* Prevent input overflow */
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Keep the same arrangement on tablets and mobiles */
+@media screen and (max-width: 1000px) {
+    .quote-form .form-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .quote-form .form-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 9px;
+    }
+
+    .quote-form .field label {
+        font-size: 10px;
+    }
+
+    .quote-form .field input,
+    .quote-form .field select {
+        padding: 9px 7px;
+        font-size: 11px;
+    }
+
+    .quote-form .field textarea {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   KJ PACKS - PRODUCT DETAIL QUOTE FORMS
+   SAME LAYOUT ON DESKTOP, TABLET & MOBILE
+   ========================================== */
+
+/* Product detail quote form grid */
+#product-detail .quote-form .form-grid,
+.product-detail .quote-form .form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 14px;
+}
+
+/* Default field width */
+#product-detail .quote-form .field,
+.product-detail .quote-form .field {
+    grid-column: span 3;
+    min-width: 0;
+}
+
+/* Product name - full row */
+#product-detail .quote-form .field.full,
+.product-detail .quote-form .field.full {
+    grid-column: 1 / -1 !important;
+}
+
+/* Length, breadth, height */
+#product-detail .quote-form .form-grid > .field:nth-child(2),
+#product-detail .quote-form .form-grid > .field:nth-child(3),
+#product-detail .quote-form .form-grid > .field:nth-child(4) {
+    grid-column: span 2;
+}
+
+/* Measurement, unit, ply */
+#product-detail .quote-form .form-grid > .field:nth-child(5),
+#product-detail .quote-form .form-grid > .field:nth-child(6),
+#product-detail .quote-form .form-grid > .field:nth-child(7) {
+    grid-column: span 2;
+}
+
+/* GSM and BF */
+#product-detail .quote-form .form-grid > .field:nth-child(8),
+#product-detail .quote-form .form-grid > .field:nth-child(9) {
+    grid-column: span 3;
+}
+
+/* Printing and quantity */
+#product-detail .quote-form .form-grid > .field:nth-child(10),
+#product-detail .quote-form .form-grid > .field:nth-child(11) {
+    grid-column: span 3;
+}
+
+/* Remaining fields - full width */
+#product-detail .quote-form .form-grid > .field:nth-child(n+12) {
+    grid-column: 1 / -1;
+}
+
+/* Input sizing */
+#product-detail .quote-form input,
+#product-detail .quote-form select,
+#product-detail .quote-form textarea {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Mobile and tablet - preserve six-column layout */
+@media (max-width: 1000px) {
+    #product-detail .quote-form .form-grid,
+    .product-detail .quote-form .form-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 9px;
+    }
+}
+
+@media (max-width: 760px) {
+    #product-detail .quote-form .field label,
+    .product-detail .quote-form .field label {
+        font-size: 10px;
+    }
+
+    #product-detail .quote-form .field input,
+    #product-detail .quote-form .field select,
+    .product-detail .quote-form .field input,
+    .product-detail .quote-form .field select {
+        font-size: 11px;
+        padding: 9px 7px;
+    }
+}
+
+/* ==========================================
+   MOBILE - REDUCE ALL SECTION DESCRIPTIONS
+   ========================================== */
+
+@media screen and (max-width: 760px) {
+
+    /* All section description paragraphs */
+    .section-head p {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 12px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE NAVIGATION - SHOW CALL BUTTON
+   HIDE GET QUOTE BUTTON
+   ========================================== */
+
+@media screen and (max-width: 760px) {
+
+    /* Hide Get Quote button */
+    .nav-actions .btn:not(.call-btn) {
+        display: none !important;
+    }
+
+    /* Show Call button */
+    .nav-actions .call-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+}
+
+/* Reduce View Product Details text on mobile */
+@media screen and (max-width: 760px) {
+    .product-card .text-link {
+        font-size: 9px !important;
+        line-height: 1 !important;
+    }
+}
