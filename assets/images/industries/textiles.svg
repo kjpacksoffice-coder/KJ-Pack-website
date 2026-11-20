@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Textiles & Home Furnishings">
+<rect width="600" height="400" fill="#EEE8DE"/>
+<rect x="45" y="55" width="510" height="290" rx="18" fill="#D7C1A2"/>
+<path d="M140 270h320M180 270V160h240v110M220 160v-45h160v45" fill="none" stroke="#292B2D" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220" cy="290" r="22" fill="#B58A58" stroke="#292B2D" stroke-width="7"/>
+<circle cx="380" cy="290" r="22" fill="#B58A58" stroke="#292B2D" stroke-width="7"/>
+<text x="300" y="375" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#292B2D">Textiles</text>
+</svg>

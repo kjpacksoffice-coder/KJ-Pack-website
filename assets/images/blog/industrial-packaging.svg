@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Industrial packaging guide">
+<rect width="600" height="600" fill="#F4F0E9"/>
+<path d="M105 235 300 135 495 235 300 340Z" fill="#D8B98E" stroke="#292B2D" stroke-width="8" stroke-linejoin="round"/>
+<path d="M105 235v205l195 105V340Z" fill="#B58A58" stroke="#292B2D" stroke-width="8" stroke-linejoin="round"/>
+<path d="M495 235v205L300 545V340Z" fill="#9C7448" stroke="#292B2D" stroke-width="8" stroke-linejoin="round"/>
+<path d="M300 135v205" stroke="#292B2D" stroke-width="8"/>
+<path d="M105 235 300 340 495 235" fill="none" stroke="#292B2D" stroke-width="8"/>
+<text x="300" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#292B2D">Industrial packaging guide</text>
+</svg>
